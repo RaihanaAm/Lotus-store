@@ -4,6 +4,7 @@ import { BiSearchAlt } from "react-icons/bi";
 import { FiShoppingCart } from "react-icons/fi";
 import { PiFlowerLotusLight } from "react-icons/pi";
 import { useState } from "react";
+import { NavLink } from "react-router-dom"
 
 export const Nav = () => {
   const [active, setActive] = useState(true);
@@ -15,16 +16,21 @@ export const Nav = () => {
     <div className="navbar  m-0 row ">
       <div className="col-4 items">
         <a href="#">
-          <h4>Home</h4>
+          <NavLink to={"/"}><h4>Home</h4></NavLink>
         </a>
         <a href="#">
           <div class="dropdown">
             <h4 className="" data-bs-toggle="dropdown" aria-expanded="false">Boutique</h4>
             <ul className="dropdown-menu mt-3">
-              <li><button className="dropdown-item" type="button">Accessoires</button></li>
-              <li><button className="dropdown-item" type="button">Huil Esentielles</button></li>
-              <li><button className="dropdown-item" type="button">Nos savons</button></li>
-              <li><button className="dropdown-item" type="button">Solution Naturelles</button></li>
+              <NavLink to={"/accesoire"}><li><button className="dropdown-item" type="button">Accessoires</button></li>
+              </NavLink>
+              <NavLink to={"/huil"}><li><button className="dropdown-item" type="button">Huil Esentielles</button></li>
+              </NavLink>
+              <NavLink to={"/savon"}><li><button className="dropdown-item" type="button">Nos savons</button></li>
+              </NavLink>
+              <NavLink to={"/naturel"}><li><button className="dropdown-item" type="button">Solution Naturelles</button></li>
+              </NavLink>
+
             </ul>
           </div>
         </a>
