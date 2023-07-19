@@ -5,9 +5,20 @@ import jasmin from "../../assets/images/jasmin.png"
 import Orange from "../../assets/images/orange.png"
 import Citron from "../../assets/images/citron.png"
 import { Produit } from "../../layout/produit/produit"
+import { useState } from "react"
 
 export const Home = () => {
-    let images = [jasmin, lavandair, avocat, Orange, Citron]
+    let images = [jasmin, lavandair, avocat, Orange, Citron];
+    let [product, setProduct] = useState({
+        title: "",
+        dscp: "",
+        src: "",
+        price: "",
+        stock: "",
+        qntIn:""
+    })
+    let [produits,setProduit]=useState([])
+    console.log(produits);
     return (
         <>
             {/* home */}
@@ -43,37 +54,47 @@ export const Home = () => {
 
             <div className="productSection">
                 <div className="productRow">
-                    <Produit />
-                    <Produit />
+                    <Produit src={Orange} title={"Huil d'orange"} desp={"lorem lorem lorem orange"} price={25} stock={13} product={product} setpoduct={setProduct} produits={produits}  setProduit={setProduit}  />
+                    <Produit src={lavandair} title={"Huil lavendair"} desp={"lorem lorem lorem lavendaire"} price={35} stock={3}  product={product} setpoduct={setProduct} produits={produits}  setProduit={setProduit}  />
                 </div>
                 <div className="productRow">
-                    <Produit />
-                    <Produit />
+                <Produit src={Citron} title={"Huil citron"} desp={"lorem lorem lorem citron"} price={40} stock={20}  product={product} setpoduct={setProduct} produits={produits}  setProduit={setProduit}  />
+                <Produit src={avocat} title={"Huil d'avocat"} desp={"lorem lorem lorem avocat"} price={25} stock={13}  product={product} setpoduct={setProduct} produits={produits}  setProduit={setProduit}  />
                 </div>
                 <div className="productRow">
-                    <Produit />
-                    <Produit />
+                <Produit src={jasmin} title={"Huil d'jasmin"} desp={"lorem lorem lorem jasmin"} price={25} stock={13}  product={product} setpoduct={setProduct} produits={produits}  setProduit={setProduit}  />
+                <Produit src={Orange} title={"Huil d'orange"} desp={"lorem lorem lorem orange"} price={25} stock={13}  product={product} setpoduct={setProduct} produits={produits}  setProduit={setProduit}  />
                 </div>
                 <div className="panierSection">
-                <h1>panier</h1>
-                <div>
-                    {/* item */}
-                    <div className="itemPanier d-flex">
-                        <img src={lavandair} alt="" />
-                        <div>
-                        <h3>Huile d'orange</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, repellendus.</p>
-                        <div className="d-flex">
-                            <button className="btn btn-success" >-</button>
-                            <h1>1</h1>
-                            <button className="btn btn-success">+</button>
+        
+                    <h1>panier</h1>
+                    <div>
+                        {/* item */}
+                        {
+                            produits.map((element,index)=>
+                            <div className="itemPanier d-flex">
+                            <img src={element.src} alt="" />
+                            <div>
+                                <h3>{element.title}</h3>
+
+                                <p>{element.dscp}</p>
+                                <h5>{element.price}</h5>
+                                <div className="d-flex">
+                                    <button className="btn btn-success" >-</button>
+                                    <h1>{element.qntIn}</h1> 
+                                    <button className="btn btn-success">+</button>
+                                </div>
+                            </div>
                         </div>
-                        </div>
+
+                            
+                            )
+                        }
+                        
+
                     </div>
 
                 </div>
-
-            </div>
             </div>
 
 
