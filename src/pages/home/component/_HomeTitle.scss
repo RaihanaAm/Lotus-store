@@ -1,0 +1,64 @@
+.Home {
+  background-color: #377654;
+
+  position: relative;
+  height: 93vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  .skincare {
+    padding: 0;
+    color: rgba(246, 246, 246, 0.037);
+    font-size: 275px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .Titlee {
+    position: absolute;
+    top: 33%;
+    left: 4%;
+    width: 350px;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fdfdfd;
+  }
+  .titleHome {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    width: 350px;
+    margin: 0;
+    font-size: 15px;
+
+    color: #f2f5f1;
+    span {
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+    }
+  }
+  .Mycarrousel {
+    position: absolute;
+    bottom: 0;
+    right: 30%;
+    margin-right: 100px;
+    height: 480px;
+    background-color: #ccdcd2;
+    border-radius: 180px 180px 0px 0;
+    .slide {
+      width: 350px;
+      height: 300px;
+
+      .carousel-inner {
+        img {
+          width: 99vw;
+          height: 80vh;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

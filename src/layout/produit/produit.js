@@ -1,5 +1,6 @@
 import "./_produit.scss"
 import Orange from "../../assets/images/orange.png"
+import { NavLink } from "react-router-dom"
 
 export const Produit = (props) => {
 
@@ -22,7 +23,7 @@ export const Produit = (props) => {
             if (element.title === produit.title) {
                 
                 element.qntIn+=1
-                produit.stock-=1
+                props.setStock(props.stock-1)
                 console.log(produit.stock);
                 cound = true
             }
@@ -31,14 +32,7 @@ export const Produit = (props) => {
             tab.push(produit)
             props.setProduit(tab)
             cound = true
-
         }
-
-
-
-
-
-
     }
     return (
         <div className="ProduitItem">
@@ -54,6 +48,8 @@ export const Produit = (props) => {
                     <h6>{props.stock}</h6>
 
                     <h5>{props.price}</h5>
+                    {/* <NavLink to={`/product/test`}><button>Add to card</button></NavLink> */}
+
                     <button onClick={Value}>Add to card</button>
                 </div>
             </div>
