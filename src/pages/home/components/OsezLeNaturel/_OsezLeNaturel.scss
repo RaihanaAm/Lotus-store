@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "bee";
+  src: url(../../../../assets/fonts/BreeSerif-Regular.ttf);
+}
+
+.OsezLeNaturel {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: rgb(0, 98, 38);
+    font-family: "bee";
+    margin: 10px 0;
+  }
+  p {
+    width: 80%;
+    color: rgb(49, 49, 49);
+    margin: 10px;
+    font-size: 18px;
+  }
+}

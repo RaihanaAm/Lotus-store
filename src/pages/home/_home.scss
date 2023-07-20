@@ -1,29 +1,3 @@
-@font-face {
-  font-family: "bee";
-  src: url(../../assets/fonts/BreeSerif-Regular.ttf);
-}
-
-
-
-.ite {
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h1 {
-    color: rgb(0, 98, 38);
-    font-family: "bee";
-    margin: 10px 0;
-  }
-  p {
-    width: 80%;
-    color: rgb(49, 49, 49);
-    margin: 10px;
-    font-size: 18px;
-  }
-}
 
 .productSection{
   position: relative;
@@ -38,35 +12,7 @@
   }
 
 }
-.panierSection{
-  position: absolute;
-  top: 0;
-  right: 10px;
-  width: 400px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  h1{
-    text-align: center;
-  }
-  background-color: rgb(240, 240, 240);
-  .itemPanier{
-      padding: 10px;
 
-    width: 350px;
-    height: 250px;
-    background-color: #e2fcef;
-    margin: 10px;
-    
-    img{
-      width: 120px;
-      height: 150px;
-
-    }
-    
-  }
-  
-}
 
 
 

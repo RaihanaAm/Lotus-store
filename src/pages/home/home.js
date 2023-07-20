@@ -1,8 +1,10 @@
 import "./_home.scss"
+import { HomeTitle } from "./components/HomeTitle/HomeTitle"
+import { OsezLeNaturel } from "./components/OsezLeNaturel/OsezLeNaturel"
+
 
 import { Produit } from "../../layout/produit/produit"
 import { useState } from "react"
-import { HomeTitle } from "./component/HomeTitle"
 
 export const Home = () => {
     let [product, setProduct] = useState({ title: "", dscp: "", src: "", price: "", stock: "", qntIn: "" })
@@ -29,14 +31,9 @@ export const Home = () => {
     const [stock,setStock]=useState(Math.round(Math.random()*20))
     return (
         <>
-            {/* home */}
             <HomeTitle/>
-
-            {/* items */}
-            <div className="ite ">
-                <h1>Dare to be natural !</h1>
-                <p> we believe that <b>beauty</b> knows no boundaries, and every individual deserves to feel empowered and <b>confident</b> in their own skin. Our store offers a meticulously curated selection of premium <b>cosmetic</b>  brands, ranging from renowned classics to the latest cutting-edge innovations</p>
-            </div>
+            <OsezLeNaturel/>
+           
 
             <div className="productSection">
                 <div className="productRow">
