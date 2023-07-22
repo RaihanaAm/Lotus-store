@@ -15,10 +15,8 @@ export const Nav = () => {
   return (
     <div className="navbar  m-0 row ">
       <div className="col-4 items">
-        <a href="#">
           <NavLink to={"/"}><h4>Home</h4></NavLink>
-        </a>
-        <a href="#">
+        <a href="">
           <div class="dropdown">
             <h4 className="" data-bs-toggle="dropdown" aria-expanded="false">Boutique</h4>
             <ul className="dropdown-menu mt-3">
