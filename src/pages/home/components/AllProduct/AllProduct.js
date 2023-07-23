@@ -7,7 +7,7 @@ export const AllProduct = (props) => {
                 {
                     props.products.map((element, index) =>
                         <>
-                            <Product name={element.name} descrip={element.descrip} price={element.price} stock={element.stock} src={element.src} />
+                            <Product name={element.name} descrip={element.descrip} price={element.price} stock={element.stock} src={element.src} addToPanier={props.addToPanier} />
                             {/* <Product /> */}
                         </>
                     )

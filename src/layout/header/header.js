@@ -53,11 +53,11 @@ export const Nav = () => {
             <BiSearchAlt onClick={search} />
           </a>
           <a href="#">
-            <RiAccountPinCircleLine />
+          <RiAccountPinCircleLine />
+            
           </a>
-          <a href="#">
-            <FiShoppingCart />
-          </a>
+          <NavLink to={"/panier"}><FiShoppingCart />
+             </NavLink> 
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ export const Home = (props) => {
         <>
             {/* <HomeTitle /> */}
             {/* <OsezLeNaturel /> */}
-            <AllProduct products={props.products} />
+            <AllProduct products={props.products} addToPanier={props.addToPanier} />
         </>
     )
 }

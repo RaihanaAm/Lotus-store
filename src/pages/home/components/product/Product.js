@@ -20,7 +20,9 @@ export const Product = (props) => {
                         <h5>{props.price}$</h5>
                     </div>
                     <NavLink to={`/product/${props.name}`}>
-                        <button>Add to card</button>
+                        <button onClick={()=>{
+                            props.addToPanier(props.name)
+                        }}>Show product</button>
                     </NavLink>
                 </div>
             </div>
